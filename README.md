@@ -3,6 +3,11 @@ A simple, beautiful and mobile-friendly web app that shows random Urdu quotes wi
 
 ---
 
+## 📱 Live Demo  
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://siyam-umar.github.io/urdu-quotes-app/)
+
+---
+
 ## ✨ Features
 
 - ✔ **Mobile Friendly (349px optimized)**
