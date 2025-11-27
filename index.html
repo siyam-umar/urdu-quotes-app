@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motivation Hub — Quotes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SPLASH / LOGO -->
+  <div id="splash" class="splash">
+    <div class="splash-card">
+      <!-- simple inline SVG logo -->
+      <svg width="86" height="86" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="6" fill="#6A5AF9"/>
+        <path d="M7 10c1.5-2 4-2 5 0 1-2 3.5-2 5 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 15h10" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <h2>Motivation Hub</h2>
+      <p>Chalo ek naya quote le kar aapki energy badhain!</p>
+    </div>
+  </div>
+
+  <!-- DARK MODE TOGGLE -->
+  <button id="darkToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+
+  <main class="app">
+    <header>
+      <h1>🌟 Motivation Hub</h1>
+      <div class="controls-row">
+        <div class="sound-wrap">
+          <button id="soundToggle" class="small-btn" aria-label="Toggle sound">🔊</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CATEGORY TABS -->
+    <nav class="tabs" role="tablist" aria-label="Quote categories">
+      <button class="tab" data-cat="urdu">اردو</button>
+      <button class="tab" data-cat="islamic">اسلامی</button>
+      <button class="tab" data-cat="english">English</button>
+      <button class="tab" data-cat="funny">Funny</button>
+    </nav>
+
+    <!-- QUOTE CARD -->
+    <section class="card">
+      <div id="quoteArea" class="quote">بٹن دبائیں اور نیا قول حاصل کریں!</div>
+      <div class="meta">
+        <small id="author"></small>
+      </div>
+
+      <div class="actions">
+        <button id="newBtn" class="primary">نیا قول</button>
+        <button id="shareBtn" class="secondary">Share</button>
+        <button id="copyBtn" class="secondary">Copy</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Made with ❤ — Siyam</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

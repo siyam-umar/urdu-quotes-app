@@ -1,0 +1,104 @@
+/* Google font fallback; keep UI readable even if Urdu font unavailable */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root{
+  --bg-img: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80');
+  --accent: #6a5af9;
+  --accent-2: #ff7ac6;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Nastaliq Urdu", serif;direction: rtl}
+body{
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  transition: background-color .3s ease;
+}
+
+/* dark mode */
+body.dark {
+  background: linear-gradient(180deg,#08101a 0%, #0e1620 100%);
+  color:#e9eef8;
+}
+
+/* splash */
+.splash{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);backdrop-filter: blur(3px);
+  z-index:50;animation: splashIn .7s ease;
+}
+.splash-card{
+  background:rgba(255,255,255,0.95);padding:28px;border-radius:14px;text-align:center;max-width:320px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.2);
+}
+body.dark .splash-card{background:rgba(10,12,16,0.8);color:#e8eefc}
+.splash-card h2{margin:12px 0 6px;font-size:20px}
+.splash-card p{margin:0;font-size:13px;opacity:.9}
+
+@keyframes splashIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+
+/* app layout */
+.app{width:100%;max-width:420px;z-index:10}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+header h1{margin:0;font-size:20px}
+.controls-row{display:flex;gap:8px;align-items:center}
+
+/* dark toggle top-right */
+.icon-btn{
+  position:fixed;top:18px;left:18px;border:none;background:rgba(255,255,255,0.9);padding:8px;border-radius:10px;font-size:18px;cursor:pointer;z-index:60;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+body.dark .icon-btn{background:rgba(255,255,255,0.06);color:#fff}
+
+/* tabs */
+.tabs{display:flex;gap:8px;margin-bottom:12px;overflow:auto;padding-bottom:4px}
+.tab{flex:1;min-width:70px;padding:10px;border-radius:10px;border:none;background:rgba(255,255,255,0.88);cursor:pointer;font-weight:600}
+.tab:active{transform:translateY(1px)}
+body.dark .tab{background:rgba(255,255,255,0.05);color:#fff}
+.tab.active{box-shadow:0 6px 18px rgba(106,90,249,0.15);outline:2px solid rgba(106,90,249,0.12)}
+
+/* card */
+.card{
+  background: rgba(255,255,255,0.95);
+  padding:18px;border-radius:14px;backdrop-filter: blur(6px);
+  box-shadow:0 12px 40px rgba(2,6,23,0.12);
+  animation: popIn .5s ease;
+}
+body.dark .card{background:rgba(20,20,20,0.75);color:#fff}
+
+@keyframes popIn{from{opacity:0;transform:translateY(6px) scale(.995)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+.quote{
+  min-height:88px;padding:18px;border-radius:10px;font-size:20px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.35;
+  transition: transform .28s cubic-bezier(.2,.9,.3,1), opacity .25s ease;
+  background:linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.92));
+}
+body.dark .quote{background:linear-gradient(180deg,#141414,#0f1113)}
+
+.quote.animate-out{opacity:0;transform:translateY(8px) scale(.995)}
+.quote.animate-in{opacity:1;transform:translateY(0) scale(1)}
+
+/* meta */
+.meta{margin-top:8px;text-align:center;color:rgba(0,0,0,0.45);min-height:18px}
+body.dark .meta{color:rgba(255,255,255,0.55)}
+
+/* actions */
+.actions{display:flex;gap:8px;margin-top:14px}
+.primary{flex:1;padding:12px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+.secondary{padding:12px;border-radius:10px;border:none;background:rgba(255,255,255,0.9);cursor:pointer}
+body.dark .secondary{background:rgba(255,255,255,0.04);color:#fff}
+
+/* small screen tweaks */
+@media (max-width:420px){
+  .tabs{gap:6px}
+  .tab{padding:9px;font-size:14px}
+  .quote{font-size:18px;padding:14px}
+}
+
+/* footer */
+.footer{text-align:center;margin-top:12px;color:rgba(0,0,0,0.45);font-size:12px}
+body.dark .footer{color:rgba(255,255,255,0.45)}
