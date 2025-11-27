@@ -3,12 +3,6 @@ A simple, beautiful and mobile-friendly web app that shows random Urdu quotes wi
 
 ---
 
-## 📱 Live Demo  
-👉 **[Visit the Project](https://siyam-umar.github.io/urdu-quotes-app/)**  
-(If you want, I can help you publish with GitHub Pages too.)
-
----
-
 ## ✨ Features
 
 - ✔ **Mobile Friendly (349px optimized)**
