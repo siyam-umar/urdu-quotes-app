@@ -68,7 +68,7 @@ index.html
 ---
 
 ## ❤️ About  
-This app is created by **Siyam** for fun and practice.  
+This app is created by **Eisha** for fun and practice.  
 Feel free to fork and modify it. 😊
 
 ---
